@@ -1,0 +1,45 @@
+
+.ems-listbox {
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 90%;
+  }
+  
+  .chart-legend .text-primary,
+  .chart-legend .text-primary:hover {
+    color: #7A9E9F;
+  }
+  
+  .chart-legend .text-info,
+  .chart-legend .text-info:hover {
+    color: #68B3C8;
+  }
+  
+  .chart-legend .text-success,
+  .chart-legend .text-success:hover {
+    color: #7AC29A;
+  }
+  
+  .chart-legend .text-warning,
+  .chart-legend .text-warning:hover {
+    color: #F3BB45;
+  }
+  
+  .chart-legend .text-danger,
+  .chart-legend .text-danger:hover {
+    color: #EB5E28;
+  }
+
+  
+.basic-container {
+  padding: 30px;
+}
+
+  
+  .ag-header-cell-text {
+    font-size: 80%;
+    text-overflow: clip !important;
+    overflow: hidden !important;
+    white-space: normal !important;
+  }
