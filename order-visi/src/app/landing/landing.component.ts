@@ -6,13 +6,6 @@ import {MatAutocompleteSelectedEvent, MatChipInputEvent, MatAutocomplete} from '
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 
-
-
-
-export class Alertobj {
-  alertTrigger:string;
-    alertType:String;
-}
 @Component({
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css'],
@@ -20,6 +13,7 @@ export class Alertobj {
 
 export class LandingComponent implements OnInit {
 
+  
   visible = true;
   selectable = true;
   removable = true;

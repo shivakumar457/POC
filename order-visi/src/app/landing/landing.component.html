@@ -1,27 +1,46 @@
 <div>
-  <mat-form-field  appearence = "outline" class="example-chip-list scrolling-box">
+  <mat-form-field  class="example-chip-list scrolling-box"  [hidden]="true">
     <mat-chip-list #chipList>
-      <mat-chip
+      <!-- <mat-chip
         *ngFor="let dat of detailedData"
         [selectable]="selectable"
         [removable]="removable"
         (removed)="remove(dat)">
         {{dat}}
         <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-      </mat-chip>
-      <input textarea
-        #fruitInput
-        [formControl]="DataCtrl"
-        [matAutocomplete]="auto"
+      </mat-chip> -->
+      <input [hidden]="true"
         [matChipInputFor]="chipList"
         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
         [matChipInputAddOnBlur]="addOnBlur"
         (matChipInputTokenEnd)="add($event)">
     </mat-chip-list>
-    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+    <!-- <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
       <mat-option *ngFor="let data of filteredJsonData | async" [value]="data">
         {{data}}
       </mat-option>
-    </mat-autocomplete>
+    </mat-autocomplete> -->
   </mat-form-field>
+
+  <mat-form-field class="example-chip-list scrolling-box">
+      <!-- <mat-chip-list #chipList> -->
+      <mat-chip
+      *ngFor="let dat of detailedData"
+      [selectable]="selectable"
+      [removable]="removable"
+      (removed)="remove(dat)">
+      {{dat}}
+      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+    </mat-chip>
+
+      <textarea  matInput   #fruitInput [formControl]="DataCtrl" [matAutocomplete]="auto"  (click)="add($event)">
+       
+        </textarea>
+      <!-- </mat-chip-list> -->
+    </mat-form-field>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+        <mat-option *ngFor="let data of filteredJsonData | async" [value]="data">
+          {{data}}
+        </mat-option>
+      </mat-autocomplete>
 </div>

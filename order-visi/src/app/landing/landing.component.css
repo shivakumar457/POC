@@ -9,7 +9,7 @@
     display: none;
 }
   .scrolling-box{
-    background-color: #eaeaea;
+    /* background-color: #eaeaea; */
   display: block;
   max-width: 50%;
   max-height: 200px;
