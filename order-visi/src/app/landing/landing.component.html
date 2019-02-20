@@ -1,6 +1,6 @@
 <div>
-  <mat-form-field  class="example-chip-list scrolling-box"  [hidden]="true">
-    <mat-chip-list #chipList>
+  <!-- <mat-form-field  class="example-chip-list scrolling-box"  [hidden]="true"> -->
+    <!-- <mat-chip-list #chipList> -->
       <!-- <mat-chip
         *ngFor="let dat of detailedData"
         [selectable]="selectable"
@@ -9,21 +9,18 @@
         {{dat}}
         <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
       </mat-chip> -->
-      <input [hidden]="true"
-        [matChipInputFor]="chipList"
-        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-        [matChipInputAddOnBlur]="addOnBlur"
-        (matChipInputTokenEnd)="add($event)">
-    </mat-chip-list>
+      <!-- <input [hidden]="true"
+        > -->
+    <!-- </mat-chip-list> -->
     <!-- <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
       <mat-option *ngFor="let data of filteredJsonData | async" [value]="data">
         {{data}}
       </mat-option>
     </mat-autocomplete> -->
-  </mat-form-field>
+  <!-- </mat-form-field> -->
 
   <mat-form-field class="example-chip-list scrolling-box">
-      <!-- <mat-chip-list #chipList> -->
+      <mat-chip-list #chipList>
       <mat-chip
       *ngFor="let dat of detailedData"
       [selectable]="selectable"
@@ -36,7 +33,7 @@
       <textarea  matInput   #fruitInput [formControl]="DataCtrl" [matAutocomplete]="auto"  (click)="add($event)">
        
         </textarea>
-      <!-- </mat-chip-list> -->
+      </mat-chip-list>
     </mat-form-field>
     <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
         <mat-option *ngFor="let data of filteredJsonData | async" [value]="data">

@@ -15,4 +15,5 @@
   max-height: 200px;
   padding: 1em;
   overflow-y: auto;
+  border:solid 1px;
   }
