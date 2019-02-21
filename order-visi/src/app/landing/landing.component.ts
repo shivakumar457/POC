@@ -29,8 +29,9 @@ export class LandingComponent implements OnInit {
   constructor() {
     this.filteredJsonData = this.DataCtrl.valueChanges.pipe(
       startWith(null),
-      map((singleData: string | null) => singleData ? this._filter(singleData) : this.allData.slice()));
+      map((data: string | null) => data ? this._filter(data) : this.allData.slice()));
   }
+  
   
   add(event: MatChipInputEvent): void {
     if (!this.matAutocomplete.isOpen) {
@@ -62,7 +63,7 @@ export class LandingComponent implements OnInit {
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-    return this.allData.filter(singleData => singleData.toLowerCase().indexOf(filterValue) === 0);
+    return this.allData.filter(data => data.toLowerCase().indexOf(filterValue) === 0);
   }
 
   ngOnInit() {

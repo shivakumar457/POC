@@ -17,3 +17,31 @@
   overflow-y: auto;
   border:solid 1px;
   }
+  .container{
+    background-color: #eaeaea;
+    border:solid 1px;
+    margin-top:30px;
+    /* max-width: 50%;
+    max-height: 200px; */
+    padding: 1em;
+    overflow-y: auto;
+    border:solid 1px;
+   
+  }
+  .textArea{
+    background-color: #eaeaea;
+    border:solid 0px;
+    margin-top:30px;
+    width: 1138px;
+    /* margin-bottom:-15px; */
+  }
+  [hidden] {
+    display: none;
+  }
+ .test1 {
+    display: none;
+  }
+
+  input[hidden] {
+    display: none;
+  }
